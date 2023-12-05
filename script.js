@@ -44,7 +44,7 @@ $(document).ready(() => {
     };  
 
     function newGame() {
-        $('#player div').text('0');
+        $('.player div').text('0');
         parseCurrentScore = 0;
         parseTotalScore = 0;
         player1.id = true;
@@ -126,6 +126,19 @@ $(document).ready(() => {
     $('#add2').on('click', () => {
         addName2();
     });
+
+
+    ///////////////////// INITIALIZATION /////////////////////
+
+
+// Get player's names
+    const name1 = $('#player1 > p').text();
+    const name2 = $('#player2 > p').text();
+
+
+// declaration player 1 & 2
+    const player1 = new Player(true, name1, '#currentScore1', '#totalScore1');
+    const player2 = new Player(false, name2, '#currentScore2', '#totalScore2');
 
 
 }); 
