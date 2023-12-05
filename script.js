@@ -80,4 +80,52 @@ $(document).ready(() => {
     }; 
 
 
+    ///////////////////// BUTTONS /////////////////////
+
+
+// New Game
+    $('#newGame').on('click', () => {
+        newGame();
+    });
+
+// Hold Score
+    $('#hold').on('click', () => { 
+        if (player1.id === true) {
+            player1.hold();
+            player1.id = false;
+            player2.id = true;
+        } else if (player2.id === true) {
+            player2.hold();
+            player1.id = true;
+            player2.id = false;
+        };
+        win()
+    });
+
+// Roll Dice
+    $('#roll').on('click', () => {
+        if (player1.id === true) {
+            player1.rollDice();
+            if (player1.id === false) {
+                player2.id = true;
+            }
+        } else if (player2.id === true){
+            player2.rollDice();
+            if (player2.id === false) {
+            player1.id = true;
+            }
+        }
+    });
+
+// Add name 1
+    $('#add1').on('click', () => {
+        addName1();
+    });
+
+// Add name 2
+    $('#add2').on('click', () => {
+        addName2();
+    });
+
+
 }); 
