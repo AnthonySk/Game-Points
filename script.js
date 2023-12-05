@@ -32,5 +32,52 @@ $(document).ready(() => {
             }
         }
     }
-    
-});  
+
+
+    ///////////////////// FUNCTIONS /////////////////////
+
+
+    function random(min, max) {
+        min = Math.ceil(min);
+        max = Math.ceil(max);
+        return (Math.floor(Math.random(Math.random()) * max) + min);
+    };  
+
+    function newGame() {
+        $('#player div').text('0');
+        parseCurrentScore = 0;
+        parseTotalScore = 0;
+        player1.id = true;
+        player2.id = false;
+        $('#roll').prop('disabled', false);
+        $('#hold').prop('disabled', false);
+    }; 
+
+    function win() {
+        const TotalScore1 = parseInt($(player1.idTotalScore).text());
+        const TotalScore2 = parseInt($(player2.idTotalScore).text());
+        if (TotalScore1 >= 100) {
+            alert(`${player1.name} a gagné`)
+            $('#roll').prop('disabled', true);
+            $('#hold').prop('disabled', true);
+        } else if (TotalScore2 >= 100) {
+            alert(`${player2.name} a gagné`)
+            $('#roll').prop('disabled', true);
+            $('#hold').prop('disabled', true);
+        } 
+    };
+
+    function addName1() {
+        $('#player1 > p').text($('#name1').val());
+        $('#name1').toggle('display', false);
+        $('#add1').toggle('display', false);
+    }; 
+
+    function addName2() {
+        $('#player2 > p').text($('#name2').val());
+        $('#name2').toggle('display', false);
+        $('#add2').toggle('display', false);
+    }; 
+
+
+}); 
