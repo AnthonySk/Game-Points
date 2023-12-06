@@ -44,7 +44,7 @@ $(document).ready(() => {
     };  
 
     function newGame() {
-        $('.player div:eq(1) div').text('0');
+        $('.score').text('0');
         // parseCurrentScore = 0;
         // parseTotalScore = 0;
         player1.id = true;
@@ -66,18 +66,6 @@ $(document).ready(() => {
             $('#hold').prop('disabled', true);
         } 
     };
-
-    function addName1() {
-        $('#player1 > p').text($('#name1').val());
-        $('#name1').toggle('display', false);
-        $('#add1').toggle('display', false);
-    }; 
-
-    function addName2() {
-        $('#player2 > p').text($('#name2').val());
-        $('#name2').toggle('display', false);
-        $('#add2').toggle('display', false);
-    }; 
 
 
     ///////////////////// BUTTONS /////////////////////
@@ -117,28 +105,13 @@ $(document).ready(() => {
         }
     });
 
-// Add name 1
-    $('#add1').on('click', () => {
-        addName1();
-    });
-
-// Add name 2
-    $('#add2').on('click', () => {
-        addName2();
-    });
-
 
     ///////////////////// INITIALIZATION /////////////////////
 
 
-// Get player's names
-    const name1 = $('#player1 > p').text();
-    const name2 = $('#player2 > p').text();
-
-
 // declaration player 1 & 2
-    const player1 = new Player(true, name1, '#currentScore1', '#totalScore1');
-    const player2 = new Player(false, name2, '#currentScore2', '#totalScore2');
+    const player1 = new Player(true, 'Player1', '#currentScore1', '#totalScore1');
+    const player2 = new Player(false, 'Player2', '#currentScore2', '#totalScore2');
 
 
 }); 

@@ -10,16 +10,12 @@
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 
 
 <!----------------- HEADER START ----------------->
-<!-- Respect maquette - pas de header -->
-    <!-- <header>
-        <h1 class="d-flex justify-content-center p-4 m-0"> Point's Game </h1>
-    </header> -->
+    <!-- Respect maquette - pas de header -->
 <!----------------- HEADER END ----------------->
 
 
@@ -31,12 +27,10 @@
             <!-------- Player 1 -------->
         <div class="bgPlayer1 text-center pt-5 w-50">
             <div id="player1" class="d-flex flex-column align-items-center ">
-                <p class="mt-4 mb-3">Joueur 1</p>
-                <input id="name1" class="rounded w-75">
-                <button id="add1" class="rounded w-50 m-1">Add name</button>
+                <p class="mt-4 mb-1">Joueur 1</p>
             </div>
             <div class="player d-flex flex-column align-items-center">
-                <div id="totalScore1" class="score w-25 p-3">0</div>
+                <div id="totalScore1" class="score w-25 p-1 pb-5">0</div>
                 <div class="d-flex flex-column justify-content-center currentScore rounded w-50 m-4 ">
                     <p class="p-1">Current</p>
                     <div id="currentScore1" class="score p-1">0</div>
@@ -47,23 +41,22 @@
     <!-------- Middle area -------->
     <div class="middleArea">
         <div id="game" class="d-flex justify-content-center">
-            <button id="newGame" class="rounded">New game</button>
+            <button id="newGame" class="rounded">NEW GAME</button>
         </div>
+        <img width="30px" height="30px" src="img/dice-2.svg" alt="score roll dice">
         <div class="d-flex flex-column align-items-center buttonGame">
-            <button id="roll" class="rounded m-1">Roll Dice</button>
-            <button id="hold" class="rounded m-1">Hold</button>
+            <button id="roll" class="rounded m-1">ROLL DICE</button>
+            <button id="hold" class="rounded m-1">HOLD</button>
         </div>
     </div>
 
             <!-------- Player 2 -------->
         <div class="bgPlayer2 text-center pt-5 w-50">
             <div id="player2" class="d-flex flex-column align-items-center">
-                <p class="mt-4 mb-3">Joueur 2</p>
-                <input id="name2" class="rounded w-75">
-                <button id="add2" class="rounded w-50 m-1">Add name</button>
+                <p class="mt-4 mb-1">Joueur 2</p>
             </div>
             <div class="player p-0 d-flex flex-column align-items-center">
-                <div id="totalScore2" class="score w-25 p-3">0</div>
+                <div id="totalScore2" class="score w-25 p-1 pb-5">0</div>
                 <div class="d-flex flex-column justify-content-center currentScore rounded w-50 m-4">
                     <p class="p-1">Current</p>
                     <div id="currentScore2" class="score p-1">0</div>
@@ -84,10 +77,7 @@
 
 
 <!----------------- FOOTER START ----------------->
-<!-- Respect maquette - pas de footer -->
-    <!-- <footer>
-
-    </footer> -->
+    <!-- Respect maquette - pas de footer -->
 <!----------------- FOOTER END ----------------->
 
 </html>

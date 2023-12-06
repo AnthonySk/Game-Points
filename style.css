@@ -30,25 +30,51 @@ header {
 }
 
 .middleArea {
+    width: 6rem;
     position: absolute;
     top: 8rem;
     left: 50%;
     transform: translate(-50%);
+    
 }
 
 .buttonGame {
-    position : absolute;
-    top: 16rem;
+    position : relative;
+    top: 20rem; 
 }
 
-/* Changed player name and new game button to match */
+img {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/************ MODIFICATION CSS ************/
+
+
+/* Initialize button & input */
+button {
+    background-color: transparent;
+    border: none;
+}
+
+input {
+    background-color: transparent;
+}
+
+    /* Changed player name and new game button to match */
 .pt-5 {
     padding-top: 12rem  !important;
 }
 
-/* Correction of DIV Bootstrap padding/margin problem */
+    /* Correction of DIV Bootstrap padding/margin problem */
 div, p {
     padding: 0 !important;
     margin: 0 !important;
 }
 
+.w-25 {
+    width: 10px !important;
+}
