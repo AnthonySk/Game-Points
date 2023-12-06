@@ -5,66 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Point's game</title>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+
 </head>
 
 
 
 <!----------------- HEADER START ----------------->
-<header>
-
-</header>
+<!-- Respect maquette - pas de header -->
+    <!-- <header>
+        <h1 class="d-flex justify-content-center p-4 m-0"> Point's Game </h1>
+    </header> -->
 <!----------------- HEADER END ----------------->
 
 
 
 <!----------------- BODY START ----------------->
 <body>
+    <!-------- Game area -------->
+    <div class="d-flex vh-100">
             <!-------- Player 1 -------->
-    <div class="d-flex flex-row">
-        <div id="player1" class="d-flex flex-column">
-            <p>Joueur 1</p>
-            <input id="name1">
-            <button id="add1">add1</button>
+        <div class="bgPlayer1 text-center pt-5 w-50">
+            <div id="player1" class="d-flex flex-column align-items-center ">
+                <p class="mt-4 mb-3">Joueur 1</p>
+                <input id="name1" class="rounded w-75">
+                <button id="add1" class="rounded w-50 m-1">Add name</button>
+            </div>
+            <div class="player d-flex flex-column align-items-center">
+                <div id="totalScore1" class="w-25 p-3">0</div>
+                <div class="d-flex flex-column justify-content-center currentScore rounded w-50 m-4 ">
+                    <p class="p-1">Current</p>
+                    <div id="currentScore1" class="p-1">0</div>
+                </div>
+            </div>
         </div>
-        <div class="player">
-            <p>Current score :</p>
-            <div id="currentScore1">0</div>
-            <p>Total score :</p>
-            <div id="totalScore1">0</div>
-        </div>
-    </div>
 
-            <!-------- Middle area -------->
-    <div class="row justify-content-center">
-        <div id="game" class="d-flex flex-column w-25">
-            <button id="newGame">New game</button>
+    <!-------- Middle area -------->
+    <div class="middleArea">
+        <div id="game" class="d-flex justify-content-center">
+            <button id="newGame" class="rounded">New game</button>
         </div>
-        <div class="d-flex flex-row row justify-content-center">
-            <button id="roll" class="w-25">Roll Dice</button>
-            <button id="hold" class="w-25">Hold my score</button>
+        <div class="d-flex flex-column align-items-center buttonGame">
+            <button id="roll" class="rounded m-1">Roll Dice</button>
+            <button id="hold" class="rounded m-1">Hold</button>
         </div>
     </div>
 
             <!-------- Player 2 -------->
-    <div class="d-flex flex-row">
-        <div id="player2" class="d-flex flex-column">
-            <p>Joueur 2</p>
-            <input id="name2">
-            <button id="add2">add2</button>
-        </div>
-        <div class="player">
-            <p>Current score :</p>
-            <div id="currentScore2">0</div>
-            <p>Total score :</p>
-            <div id="totalScore2">0</div>
+        <div class="bgPlayer2 text-center pt-5 w-50">
+            <div id="player2" class="d-flex flex-column align-items-center">
+                <p class="mt-4 mb-3">Joueur 2</p>
+                <input id="name2" class="rounded w-75">
+                <button id="add2" class="rounded w-50 m-1">Add name</button>
+            </div>
+            <div class="player p-0 d-flex flex-column align-items-center">
+                <div id="totalScore2" class="w-25 p-3">0</div>
+                <div class="d-flex flex-column justify-content-center currentScore rounded w-50 m-4">
+                    <p class="p-1">Current</p>
+                    <div id="currentScore2" class="p-1">0</div>
+                </div>
+            </div>
         </div>
     </div>
 
 
+
 <!-- SCRIPT -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
@@ -73,9 +84,10 @@
 
 
 <!----------------- FOOTER START ----------------->
-<footer>
+<!-- Respect maquette - pas de footer -->
+    <!-- <footer>
 
-</footer>
+    </footer> -->
 <!----------------- FOOTER END ----------------->
 
 </html>

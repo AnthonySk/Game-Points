@@ -1,0 +1,54 @@
+/* COLORS
+    /* https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c */
+    /* 
+    player1 #FFE8D6
+    player2 #B7B7A4
+    currentScore #f36f0a 
+    header #954304
+    */
+
+body {
+    font-size: small;
+    font-family: Lato;
+}
+
+.bgPlayer1 {
+    background-color: #FFE8D6;
+}
+
+.bgPlayer2 {
+    background-color: #B7B7A4;
+}
+
+.currentScore {
+    background-color: #f36f0a;
+    height: 4rem;
+}
+
+header {
+    background-color: #954304;
+}
+
+.middleArea {
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.buttonGame {
+    position : absolute;
+    top: 16rem;
+}
+
+/* Changed player name and new game button to match */
+.pt-5 {
+    padding-top: 12rem  !important;
+}
+
+/* Correction of DIV Bootstrap padding/margin problem */
+div, p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
