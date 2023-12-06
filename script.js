@@ -44,9 +44,9 @@ $(document).ready(() => {
     };  
 
     function newGame() {
-        $('.player div').text('0');
-        parseCurrentScore = 0;
-        parseTotalScore = 0;
+        $('.player div:eq(1) div').text('0');
+        // parseCurrentScore = 0;
+        // parseTotalScore = 0;
         player1.id = true;
         player2.id = false;
         $('#roll').prop('disabled', false);
