@@ -17,6 +17,7 @@ $(document).ready(() => {
             let parseCurrentScore = parseInt($(this.idCurrentScore).text());
             $(this.idTotalScore).text(parseTotalScore += parseCurrentScore);
             $(this.idCurrentScore).text('0');
+            $('.activePlayer').toggleClass('d-none');
         }
     
         rollDice() {
@@ -29,6 +30,7 @@ $(document).ready(() => {
                 alert('tu as fait 1');
                 this.id = false;
                 $(this.idCurrentScore).text('0');
+                $('.activePlayer').toggleClass('d-none');
             }
         }
     }

@@ -17,7 +17,7 @@ body {
 }
 
 .bgPlayer2 {
-    background-color: #B7B7A4;
+    background-color: #ffdac4;
 }
 
 .currentScore {
@@ -45,9 +45,20 @@ header {
 
 .dice {
     position: absolute;
-    top: 7rem;
+    top: 7.5rem;
     left: 50%;
     transform: translate(-50%);
+}
+
+.activePlayer {
+    position: relative;
+    left: 1rem;
+    transform: translate(-50%);
+} 
+
+#totalScore2, #totalScore1 {
+    color: #f36f0a;
+    font-size: x-large;
 }
 
 
@@ -76,5 +87,5 @@ div, p {
 }
 
 .w-25 {
-    width: 10px !important;
+    width: 20px !important;
 }
