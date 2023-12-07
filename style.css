@@ -30,7 +30,7 @@ header {
 }
 
 .middleArea {
-    width: 6rem;
+    width: 10rem;
     position: absolute;
     top: 8rem;
     left: 50%;
@@ -43,7 +43,7 @@ header {
     top: 20rem; 
 }
 
-img {
+.dice {
     position: absolute;
     top: 7rem;
     left: 50%;
