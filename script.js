@@ -27,7 +27,7 @@ $(document).ready(() => {
                 let result = roll;
                 $(this.idCurrentScore).text(parseCurrentScore += result);
             } else { 
-                alert('tu as fait 1');
+                alert('Perdu, tu as fait 1 !');
                 this.id = false;
                 $(this.idCurrentScore).text('0');
                 $('.activePlayer').toggleClass('d-none');

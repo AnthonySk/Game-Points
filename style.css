@@ -7,6 +7,69 @@
     header #954304
     */
 
+
+    /************** MEDIA QUERIES **************/
+
+@media  (min-width:576px) and (max-width:768px) {
+    .buttonGame, #newGame, #player1, #player2, .currentScore {
+        font-size: medium;
+        border: 2px solid red !important;
+    }
+    .currentScore {
+        width: 8rem !important;
+        height: 5rem !important;
+    }
+    .middleArea, .buttonGame, #newGame {
+        width: 11rem !important;
+    }
+}
+
+@media  (min-width:769px) and (max-width:960px) {
+    .buttonGame, #newGame, #player1, #player2, .currentScore {
+        font-size: large;
+        border: 2px solid blue !important;
+    }
+    .currentScore {
+        width: 10rem !important;
+        height: 7rem !important;
+    }
+    .middleArea, .buttonGame, #newGame {
+        width: 12rem !important;
+    }
+}
+
+@media  (min-width:961px) and (max-width:1280px) {
+    .buttonGame, #newGame, #player1, #player2, .currentScore {
+        font-size: x-large;
+        border: 2px solid green !important;
+    }
+    .currentScore {
+        width: 11rem !important; 
+        height: 7rem !important;
+    }
+    .middleArea, .buttonGame, #newGame {
+        width: 15rem !important;
+    }
+}
+
+@media  (min-width:1281px) {
+    .buttonGame, #newGame, #player1, #player2, .currentScore {
+        font-size: xx-large;
+    }
+    .currentScore {
+        width: 14rem !important;
+        height: 10rem !important;
+    }
+    .middleArea, .buttonGame, #newGame {
+        width: 18rem !important;
+    }
+}
+.buttonSVG {
+    width: 14px;
+}
+
+    /************** STYLE GENERALE **************/
+
 body {
     font-size: small;
     font-family: Lato;
@@ -22,11 +85,8 @@ body {
 
 .currentScore {
     background-color: #f36f0a;
+    width: 6rem;
     height: 4rem;
-}
-
-header {
-    background-color: #954304;
 }
 
 .middleArea {
@@ -61,31 +121,21 @@ header {
     font-size: x-large;
 }
 
+    /************** MODIFICATION STYLE BOOTSTRAP **************/
 
-/************ MODIFICATION CSS ************/
-
-
-/* Initialize button & input */
+/* Initialize button */
 button {
     background-color: transparent;
     border: none;
 }
 
-input {
-    background-color: transparent;
-}
-
-    /* Changed player name and new game button to match */
+/* increase p-5 for the header space */
 .pt-5 {
     padding-top: 12rem  !important;
 }
 
-    /* Correction of DIV Bootstrap padding/margin problem */
+/* Correction of DIV Bootstrap padding/margin problem */
 div, p {
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.w-25 {
-    width: 20px !important;
 }
