@@ -26,7 +26,9 @@ $(document).ready(() => {
             if (roll >= 2) { 
                 let result = roll;
                 $(this.idCurrentScore).text(parseCurrentScore += result);
+                
             } else { 
+                
                 alert('Perdu, tu as fait 1 !');
                 this.id = false;
                 $(this.idCurrentScore).text('0');
@@ -38,6 +40,7 @@ $(document).ready(() => {
 
     ///////////////////// FUNCTIONS /////////////////////
 
+    
 
     function random(min, max) {
         min = Math.ceil(min);
@@ -47,12 +50,11 @@ $(document).ready(() => {
 
     function newGame() {
         $('.score').text('0');
-        // parseCurrentScore = 0;
-        // parseTotalScore = 0;
         player1.id = true;
         player2.id = false;
         $('#roll').prop('disabled', false);
         $('#hold').prop('disabled', false);
+        $('.activePlayer').toggleClass('d-none');
     }; 
 
     function win() {
@@ -88,7 +90,7 @@ $(document).ready(() => {
             player2.hold();
             player1.id = true;
             player2.id = false;
-        };
+        }
         win()
     });
 

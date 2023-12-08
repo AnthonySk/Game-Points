@@ -1,19 +1,47 @@
-/* COLORS
+    /************** COLORS **************/
+
     /* https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c */
     /* 
     player1 #FFE8D6
     player2 #B7B7A4
     currentScore #f36f0a 
-    header #954304
     */
 
 
-    /************** MEDIA QUERIES **************/
 
-@media  (min-width:576px) and (max-width:768px) {
+
+
+    /************** START MODIFICATION STYLE BOOTSTRAP **************/
+
+/* remove button style */
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/* increase p-5 for the header space */
+.pt-5 {
+    padding-top: 12rem  !important;
+}
+
+/* Correction of DIV padding/margin shift */
+div, p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+    /************** END MODIFICATION STYLE BOOTSTRAP **************/
+
+
+
+
+
+    /************** START MEDIA QUERIES **************/
+
+@media  (min-width: 576px) and (max-width: 768px) {
     .buttonGame, #newGame, #player1, #player2, .currentScore {
         font-size: medium;
-        border: 2px solid red !important;
+        /* border: 2px solid red !important; */
     }
     .currentScore {
         width: 8rem !important;
@@ -22,12 +50,24 @@
     .middleArea, .buttonGame, #newGame {
         width: 11rem !important;
     }
+    .buttonGame {
+        top: 14rem !important; 
+    }
+    #totalScore2, #totalScore1 {
+        font-size: 35px !important;
+    }
+    .dice {
+        transform: 
+            translate(-50%)
+            scale(1.8) !important;
+        top: 8rem !important;
+    }
 }
 
 @media  (min-width:769px) and (max-width:960px) {
     .buttonGame, #newGame, #player1, #player2, .currentScore {
         font-size: large;
-        border: 2px solid blue !important;
+        /* border: 2px solid blue !important; */
     }
     .currentScore {
         width: 10rem !important;
@@ -36,12 +76,27 @@
     .middleArea, .buttonGame, #newGame {
         width: 12rem !important;
     }
+    .buttonGame {
+        top: 16rem !important; 
+    }
+    #totalScore2, #totalScore1 {
+        font-size: 45px !important;
+    }
+    .buttonSVG {
+        width: 16px !important;
+    }
+    .dice {
+        transform: 
+            translate(-50%)
+            scale(2) !important;
+        top: 8.5rem !important;
+    }
 }
 
 @media  (min-width:961px) and (max-width:1280px) {
     .buttonGame, #newGame, #player1, #player2, .currentScore {
         font-size: x-large;
-        border: 2px solid green !important;
+        /* border: 2px solid green !important; */
     }
     .currentScore {
         width: 11rem !important; 
@@ -50,11 +105,27 @@
     .middleArea, .buttonGame, #newGame {
         width: 15rem !important;
     }
+    .buttonGame {
+        top: 16rem !important; 
+    }
+    #totalScore2, #totalScore1 {
+        font-size: 53px !important;
+    }
+    .buttonSVG {
+        width: 20px !important;
+    }
+    .dice {
+        transform: 
+            translate(-50%)
+            scale(2.3) !important;
+        top: 9rem !important;
+    }
 }
 
 @media  (min-width:1281px) {
     .buttonGame, #newGame, #player1, #player2, .currentScore {
         font-size: xx-large;
+        /* border: 2px solid rgb(255, 0, 230) !important; */
     }
     .currentScore {
         width: 14rem !important;
@@ -63,12 +134,30 @@
     .middleArea, .buttonGame, #newGame {
         width: 18rem !important;
     }
-}
-.buttonSVG {
-    width: 14px;
+    .buttonGame {
+        top: 16.5rem !important; 
+    }
+    #totalScore2, #totalScore1 {
+        font-size: 58px !important;
+    }
+    .buttonSVG {
+        width: 25px !important;
+    }
+    .dice {
+        transform: 
+            translate(-50%)
+            scale(2.5) !important;
+        top: 9.5rem !important;
+    }
 }
 
-    /************** STYLE GENERALE **************/
+    /************** END MEDIA QUERIES **************/
+
+
+
+
+
+    /************** START WHOLE SITE **************/
 
 body {
     font-size: small;
@@ -103,11 +192,17 @@ body {
     top: 20rem; 
 }
 
+.buttonSVG {
+    width: 15px;
+}
+
 .dice {
     position: absolute;
     top: 7.5rem;
     left: 50%;
-    transform: translate(-50%);
+    transform: 
+        translate(-50%)
+        scale(1.3)
 }
 
 .activePlayer {
@@ -121,21 +216,4 @@ body {
     font-size: x-large;
 }
 
-    /************** MODIFICATION STYLE BOOTSTRAP **************/
-
-/* Initialize button */
-button {
-    background-color: transparent;
-    border: none;
-}
-
-/* increase p-5 for the header space */
-.pt-5 {
-    padding-top: 12rem  !important;
-}
-
-/* Correction of DIV Bootstrap padding/margin problem */
-div, p {
-    padding: 0 !important;
-    margin: 0 !important;
-}
+    /************** END WHOLE SITE **************/
