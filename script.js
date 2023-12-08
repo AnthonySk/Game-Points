@@ -90,11 +90,11 @@ $(document).ready(() => {
         const TotalScore1 = parseInt($(player1.idTotalScore).text());
         const TotalScore2 = parseInt($(player2.idTotalScore).text());
         if (TotalScore1 >= 100) {
-            alert(`${player1.name} a gagné`)
+            alert('Joueur 1 a gagné')
             $('#roll').prop('disabled', true);
             $('#hold').prop('disabled', true);
         } else if (TotalScore2 >= 100) {
-            alert(`${player2.name} a gagné`)
+            alert('Joueur 2 a gagné')
             $('#roll').prop('disabled', true);
             $('#hold').prop('disabled', true);
         } 
