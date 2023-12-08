@@ -26,9 +26,9 @@ $(document).ready(() => {
             if (roll >= 2) { 
                 let result = roll;
                 $(this.idCurrentScore).text(parseCurrentScore += result);
-                
+                showSvgDiceResult(roll);
             } else { 
-                
+                showSvgDiceResult(roll);
                 alert('Perdu, tu as fait 1 !');
                 this.id = false;
                 $(this.idCurrentScore).text('0');
@@ -40,23 +40,52 @@ $(document).ready(() => {
 
     ///////////////////// FUNCTIONS /////////////////////
 
-    
+    // show SVG vs result
+    function showSvgDiceResult(x) {
+        switch (x) {
+            case 6 :
+                console.log('6')
+                $('.dice').attr('src', 'img/6.svg')
+                break;
+            case 5 :
+                console.log('5')
+                $('.dice').attr('src', 'img/5.svg')
+                break;
+            case 4 :
+                console.log('4')
+                $('.dice').attr('src', 'img/4.svg')
+                break;
+            case 3 :
+                console.log('3')
+                $('.dice').attr('src', 'img/3.svg')
+                break;
+            case 2 :
+                console.log('2')
+                $('.dice').attr('src', 'img/2.svg')
+                break;
+            case 1 :
+                console.log('1')
+                $('.dice').attr('src', 'img/1.svg')
+                break;
+        }
+        
+    }
 
+    // result random of dice
     function random(min, max) {
         min = Math.ceil(min);
         max = Math.ceil(max);
         return (Math.floor(Math.random() * max) + min);
     };  
 
+    // new game
     function newGame() {
         $('.score').text('0');
-        player1.id = true;
-        player2.id = false;
         $('#roll').prop('disabled', false);
         $('#hold').prop('disabled', false);
-        $('.activePlayer').toggleClass('d-none');
     }; 
 
+    // win process
     function win() {
         const TotalScore1 = parseInt($(player1.idTotalScore).text());
         const TotalScore2 = parseInt($(player2.idTotalScore).text());
